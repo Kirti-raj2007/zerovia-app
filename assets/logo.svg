@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="100%" height="100%">
+  <defs>
+    <!-- Background Glow Filter -->
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="subtle-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#00F5A0" flood-opacity="0.3"/>
+    </filter>
+    <!-- Primary Gradients -->
+    <linearGradient id="emerald-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5A0" />
+      <stop offset="50%" stop-color="#00D9F5" />
+      <stop offset="100%" stop-color="#10B981" />
+    </linearGradient>
+    <linearGradient id="dark-plate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1b2a" />
+      <stop offset="100%" stop-color="#050a12" />
+    </linearGradient>
+    <linearGradient id="gold-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Hexagonal Frame -->
+  <polygon points="120,12 214,66 214,174 120,228 26,174 26,66" 
+           fill="url(#dark-plate)" 
+           stroke="url(#emerald-cyan)" 
+           stroke-width="3.5" 
+           filter="url(#neon-glow)" />
+
+  <!-- Inner Cyber Grid Accent Rings -->
+  <polygon points="120,28 198,73 198,163 120,208 42,163 42,73" 
+           fill="none" 
+           stroke="#1e3a5f" 
+           stroke-width="1.5" 
+           stroke-dasharray="6 4" 
+           opacity="0.7" />
+
+  <!-- Blockchain Node Connector Lines -->
+  <path d="M120,40 L120,95 M56,155 L100,130 M184,155 L140,130" 
+        stroke="url(#emerald-cyan)" 
+        stroke-width="2.5" 
+        stroke-linecap="round" 
+        opacity="0.8" />
+
+  <!-- Central Interlocking Leaf & Smart Block Motif -->
+  <!-- Digital Eco-Leaf (Left Wing) -->
+  <path d="M120,70 C85,75 70,115 88,145 C102,168 120,172 120,172 C120,172 110,140 120,115 Z" 
+        fill="url(#emerald-cyan)" 
+        filter="url(#subtle-shadow)" />
+
+  <!-- Tech Geometric Leaf (Right Wing with Circuit Cutouts) -->
+  <path d="M120,70 C155,75 170,115 152,145 C138,168 120,172 120,172 C120,172 130,140 120,115 Z" 
+        fill="#00D9F5" 
+        opacity="0.9" />
+
+  <!-- Central Token Core: Blockchain Hex Cube -->
+  <polygon points="120,105 138,115 138,137 120,147 102,137 102,115" 
+           fill="#0A0F1D" 
+           stroke="url(#emerald-cyan)" 
+           stroke-width="2" />
+  
+  <text x="120" y="132" 
+        font-family="'Inter', -apple-system, sans-serif" 
+        font-weight="900" 
+        font-size="14" 
+        fill="#00F5A0" 
+        text-anchor="middle" 
+        letter-spacing="0.5">Z</text>
+
+  <!-- Blockchain Oracle Nodes (Glowing Dots) -->
+  <circle cx="120" cy="40" r="5" fill="#00F5A0" filter="url(#neon-glow)" />
+  <circle cx="56" cy="155" r="5" fill="#00D9F5" filter="url(#neon-glow)" />
+  <circle cx="184" cy="155" r="5" fill="#10B981" filter="url(#neon-glow)" />
+  
+  <!-- Pulse Circuit Satellite Dots -->
+  <circle cx="120" cy="190" r="3" fill="#00F5A0" opacity="0.9" />
+  <circle cx="78" cy="88" r="2.5" fill="#00D9F5" opacity="0.6" />
+  <circle cx="162" cy="88" r="2.5" fill="#00D9F5" opacity="0.6" />
+</svg>
